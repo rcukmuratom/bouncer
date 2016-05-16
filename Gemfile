@@ -8,14 +8,9 @@ gem 'optic14n', '2.0.0' # Ideally version should be synced with Transition
 gem 'erubis', '2.7.0'
 gem 'airbrake', '~> 4.3.0'
 gem 'rake', '10.1.0'
-
-group :production do
-  gem 'unicorn', '~> 5.0.0'
-end
-
-group :development do
-  gem 'mr-sparkle', '0.3.0'
-end
+gem 'sidekiq', '~> 4.1.2'
+gem 'puma', '~> 3.4.0'
+gem 'foreman', '~>0.81.0'
 
 group :test do
   gem 'database_cleaner', '1.5.1'
