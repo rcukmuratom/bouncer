@@ -6,12 +6,12 @@ gem 'nokogiri', '1.10.5'
 gem 'rack', '~> 2.0.7'
 gem 'optic14n', '2.0.1' # Ideally version should be synced with Transition
 gem 'erubis', '2.7.0'
-gem 'govuk_app_config', '~> 2.0'
-gem 'rake', '13.0.1'
 
-group :development do
-  gem 'mr-sparkle', '0.3.0'
-end
+gem 'airbrake', '~> 4.3.0'
+gem 'rake', '13.0.1'
+gem 'sidekiq', '~> 4.1.2'
+gem 'puma', '~> 3.4.0'
+gem 'foreman', '~>0.81.0'
 
 group :test do
   gem 'database_cleaner', '1.7.0'
