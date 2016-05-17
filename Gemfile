@@ -19,3 +19,7 @@ group :test do
   gem 'rspec', '~> 3.9.0'
   gem 'pry'
 end
+
+group :development, :test do
+  gem 'byebug', '~> 9.0.3'
+end

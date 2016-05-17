@@ -20,6 +20,7 @@
 Dir[File.dirname(__FILE__) + '/support/*.rb'].each {|file| require file }
 
 RACK_ENV = 'test'
+require 'byebug'
 require 'rack/test'
 require_relative '../boot'
 

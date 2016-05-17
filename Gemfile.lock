@@ -18,6 +18,7 @@ GEM
       builder
       multi_json
     builder (3.2.3)
+    byebug (9.0.6)
     coderay (1.1.2)
     concurrent-ruby (1.1.5)
     connection_pool (2.2.2)
@@ -86,6 +87,7 @@ PLATFORMS
 DEPENDENCIES
   activerecord (~> 6.0.1)
   airbrake (~> 4.3.0)
+  byebug (~> 9.0.3)
   database_cleaner (= 1.7.0)
   erubis (= 2.7.0)
   foreman (~> 0.81.0)
