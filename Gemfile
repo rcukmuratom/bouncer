@@ -17,3 +17,7 @@ group :test do
   gem 'rack-test', '0.6.3'
   gem 'rspec', '~> 3.4.0'
 end
+
+group :development, :test do
+  gem 'byebug', '~> 9.0.3'
+end
