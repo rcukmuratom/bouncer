@@ -40,7 +40,7 @@ module Bouncer
       RequestLogWorker.perform_async({
         hostname: context.host.hostname,
         path: context.mapping.path,
-        http_status: status,
+        http_status: rack_array[0],
         hit_on: Date.today,
       }.to_json)
     rescue Exception => e
