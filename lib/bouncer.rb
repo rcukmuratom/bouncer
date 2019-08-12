@@ -10,7 +10,6 @@ require 'requests'
 require 'request_log_worker'
 require 'whitelisted_host'
 require 'optic14n'
-require 'airbrake'
 
 require 'bouncer/cacher'
 require 'bouncer/canonicalized_request'
