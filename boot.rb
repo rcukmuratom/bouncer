@@ -1,3 +1,12 @@
+require 'dotenv/load'
+
+require 'rollbar'
+if ENV.include?('ROLLBAR_ACCESS_TOKEN')
+  Rollbar.configure do |config|
+    config.access_token = ENV.fetch('ROLLBAR_ACCESS_TOKEN')
+  end
+end
+
 require 'active_record'
 RACK_ENV ||= ENV['RACK_ENV'] || 'development'
 
