@@ -8,7 +8,7 @@ gem 'optic14n', '2.0.1' # Ideally version should be synced with Transition
 gem 'erubis', '2.7.0'
 gem 'airbrake', '~> 4.3.0'
 gem 'rake', '12.3.3'
-gem 'sidekiq', '~> 4.1.2'
+gem 'sidekiq', '~> 5.2.7'
 gem 'puma', '~> 4.1.0'
 gem 'foreman', '~>0.81.0'
 
