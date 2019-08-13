@@ -1,10 +1,6 @@
 require './boot'
 require 'rack/static'
-
-if ENV['RACK_ENV'] == 'production'
-  require './config/airbrake'
-  use Airbrake::Rack
-end
+require './lib/active_record/rack/connection_management'
 
 use Bouncer::Cacher
 
@@ -15,6 +11,7 @@ use Bouncer::Cacher
 # Turn public/foo.css into /foo.css
 urls = ["/favicon.ico"] + Dir["public/*.css", "public/*.png", "public/*.js"].map { |path| path.gsub("public", "") }
 use Rack::Static, urls: urls, root: 'public'
-use ActiveRecord::QueryCache
-use ActiveRecord::ConnectionAdapters::ConnectionManagement
+
+ActiveRecord::QueryCache.run
+use ActiveRecord::Rack::ConnectionManagement
 run Bouncer::App.new

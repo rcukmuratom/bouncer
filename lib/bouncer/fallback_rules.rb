@@ -25,7 +25,7 @@ module Bouncer
         redirect('https://www.gov.uk/search') if request.path =~ %r{/(en/)?AdvancedSearch}i
       when 'campaigns.direct.gov.uk'
         redirect('https://www.gov.uk/firekills') if request.path =~ %r{/firekills}
-      when 'www.number10.gov.uk', 'number10.gov.uk'
+      when 'www.number10.gov.uk', 'number10.gov.uk', 'www.pm.gov.uk', 'pm.gov.uk', 'www.number-10.gov.uk', 'number-10.gov.uk'
         redirect("http://www.number10.gov.uk/news/#{$4}") if
           request.path =~ %r{^/news/?([_0-9a-zA-Z-]+)?/([0-9]+)/([0-9]+)/(.*)-([0-9]+)$}
       when 'cdn.hm-treasury.gov.uk'
@@ -38,6 +38,13 @@ module Bouncer
           redirect("http://www.digitalmarketplace.service.gov.uk/service/#{$3}")
         else
           redirect('https://www.gov.uk/digital-marketplace')
+        end
+      when 'houseprices.landregistry.gov.uk', 'www.houseprices.landregistry.gov.uk'
+        case request.path
+        when %r{^/sold-prices/.*}
+          redirect('http://landregistry.data.gov.uk/app/ppd')
+        when %r{^/price-paid-record/.*}
+          redirect('http://landregistry.data.gov.uk/app/ppd')
         end
       end
     end
