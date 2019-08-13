@@ -12,6 +12,7 @@ gem 'rake', '13.0.1'
 gem 'sidekiq', '~> 5.2.7'
 gem 'puma', '~> 4.1.0'
 gem 'foreman', '~>0.85.0'
+gem 'dotenv'
 
 group :test do
   gem 'database_cleaner', '1.7.0'
