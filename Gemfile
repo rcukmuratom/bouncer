@@ -10,7 +10,7 @@ gem 'erubis', '2.7.0'
 gem 'airbrake', '~> 4.3.0'
 gem 'rake', '13.0.1'
 gem 'sidekiq', '~> 4.1.2'
-gem 'puma', '~> 3.4.0'
+gem 'puma', '~> 4.1.0'
 gem 'foreman', '~>0.81.0'
 
 group :test do
