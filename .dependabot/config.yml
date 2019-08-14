@@ -6,14 +6,14 @@ update_configs:
     update_schedule: "live"
     allowed_updates:
       - match:
-        dependency_name: "rollbar"
+          dependency_name: "rollbar"
       - match:
-        dependency_name: "sidekiq"
+          dependency_name: "sidekiq"
       - match:
-        dependency_name: "puma"
+          dependency_name: "puma"
       - match:
-        dependency_name: "foreman"
+          dependency_name: "foreman"
       - match:
-        dependency_name: "byebug"
+          dependency_name: "byebug"
       - match:
-        dependency_name: "dotenv"
+          dependency_name: "dotenv"
