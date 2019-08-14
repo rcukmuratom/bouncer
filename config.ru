@@ -1,6 +1,9 @@
 require './boot'
 require 'rack/static'
 require './lib/active_record/rack/connection_management'
+require 'rollbar/middleware/rack'
+
+use Rollbar::Middleware::Rack
 
 use Bouncer::Cacher
 

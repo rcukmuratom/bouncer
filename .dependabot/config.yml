@@ -1,16 +1,19 @@
+---
 version: 1
 update_configs:
   - package_manager: "ruby:bundler"
     directory: "/"
     update_schedule: "live"
     allowed_updates:
-    - match:
-        dependency_name: "airbrake"
-    - match:
+      - match:
+        dependency_name: "rollbar"
+      - match:
         dependency_name: "sidekiq"
-    - match:
+      - match:
         dependency_name: "puma"
-    - match:
+      - match:
         dependency_name: "foreman"
-    - match:
+      - match:
         dependency_name: "byebug"
+      - match:
+        dependency_name: "dotenv"
