@@ -7,7 +7,7 @@ gem 'rack', '~> 2.0.7'
 gem 'optic14n', '2.0.1' # Ideally version should be synced with Transition
 gem 'erubis', '2.7.0'
 
-gem 'rollbar'
+gem 'rollbar', '~> 2.22'
 gem 'rake', '13.0.1'
 gem 'sidekiq', '~> 5.2.7'
 gem 'puma', '~> 4.1.0'
