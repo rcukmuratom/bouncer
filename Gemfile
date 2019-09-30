@@ -9,7 +9,7 @@ gem 'erubis', '2.7.0'
 gem 'rollbar'
 gem 'rake', '12.3.3'
 gem 'sidekiq', '~> 5.2.7'
-gem 'puma', '~> 4.1.0'
+gem 'puma', '~> 4.2.0'
 gem 'foreman', '~>0.85.0'
 gem 'dotenv'
 
