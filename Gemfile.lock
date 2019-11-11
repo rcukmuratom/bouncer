@@ -62,11 +62,11 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.9.0)
     rspec-support (3.9.0)
-    sidekiq (5.2.7)
-      connection_pool (~> 2.2, >= 2.2.2)
-      rack (>= 1.5.0)
-      rack-protection (>= 1.5.0)
-      redis (>= 3.3.5, < 5)
+    sidekiq (6.0.3)
+      connection_pool (>= 2.2.2)
+      rack (>= 2.0.0)
+      rack-protection (>= 2.0.0)
+      redis (>= 4.1.0)
     thor (0.19.4)
     thread_safe (0.3.6)
     tzinfo (1.2.5)
@@ -93,7 +93,7 @@ DEPENDENCIES
   rake (= 13.0.1)
   rollbar (~> 2.22)
   rspec (~> 3.9.0)
-  sidekiq (~> 5.2.7)
+  sidekiq (~> 6.0.3)
 
 BUNDLED WITH
    1.17.2
