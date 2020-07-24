@@ -6,7 +6,14 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@master
+    - uses: actions/checkout@v2
+    - name: Set Ruby version to use
+      run: |
+        echo "::set-env name=RUBY_VERSION::$(cat .ruby-version)"
+    - name: Set up Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: ${{ env.RUBY_VERSION }}
     - name: Set up Docker
       run: docker network create test
     - name: Set up Postgres
