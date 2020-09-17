@@ -22,5 +22,5 @@ group :test do
 end
 
 group :development, :test do
-  gem 'byebug', '~> 11.0.1'
+  gem 'byebug', '~> 11.1.3'
 end
