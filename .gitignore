@@ -2,3 +2,4 @@ spec/examples.txt
 pids/*
 dump.rdb
 .env
+coverage
