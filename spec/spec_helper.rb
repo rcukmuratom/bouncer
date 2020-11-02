@@ -22,10 +22,10 @@ SimpleCov.start
 
 Dir[File.dirname(__FILE__) + "/support/*.rb"].sort.each { |file| require file }
 
-RACK_ENV = 'test'.freeze
-require 'byebug'
-require 'rack/test'
-require_relative '../boot'
+RACK_ENV = "test".freeze
+require "byebug"
+require "rack/test"
+require_relative "../boot"
 
 RSpec.configure do |config|
   config.filter_run_excluding performance: true

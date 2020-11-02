@@ -27,8 +27,7 @@ module Bouncer
                   Outcome::Status
                 end
 
-      outcome.new(context, @renderer).serve.tap { |result| log_hit(result,context) }
-
+      outcome.new(context, @renderer).serve.tap { |result| log_hit(result, context) }
     end
 
     def log_hit(rack_array, context)
@@ -42,7 +41,7 @@ module Bouncer
         http_status: rack_array[0],
         hit_on: Date.today,
       }.to_json)
-    rescue Exception => e
+    rescue Exception
       # Never, ever fail.
       # The user must get the right page, even if we lose data.
     end

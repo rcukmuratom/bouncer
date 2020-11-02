@@ -14,3 +14,11 @@ RSpec/VerifiedDoubles:
     - "spec/units/mapping_spec.rb"
     - "spec/units/organisation_spec.rb"
     - "spec/units/site_spec.rb"
+    -
+RSpec/NamedSubject:
+  Exclude:
+    - "spec/units/request_log_worker_spec.rb"
+
+Lint/RescueException:
+  Exclude:
+    - lib/bouncer/app.rb
