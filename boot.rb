@@ -19,9 +19,9 @@ require 'active_record'
 if ENV['DATABASE_URL']
   ActiveRecord::Base.establish_connection(ENV['DATABASE_URL'])
 else
-  ActiveRecord::Base.establish_connection(YAML.load(File.read(File.expand_path('../config/database.yml', __FILE__)))[RACK_ENV])
+  ActiveRecord::Base.establish_connection(YAML.safe_load(ERB.new(File.read(File.expand_path("config/database.yml", __dir__))).result)[RACK_ENV])
 end
 
-$LOAD_PATH.unshift File.expand_path('../lib', __FILE__)
+$LOAD_PATH.unshift File.expand_path("lib", __dir__)
 
-require 'bouncer'
+require "bouncer"
