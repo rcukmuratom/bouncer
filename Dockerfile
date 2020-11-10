@@ -1,4 +1,4 @@
-FROM ruby:2.6
+FROM ruby:2.7
 WORKDIR /usr/local/bouncer
 COPY . .
 RUN bundle install
