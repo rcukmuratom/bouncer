@@ -14,9 +14,10 @@
       <link rel="apple-touch-icon" type="image/png" href="https://www.ukri.org/wp-content/themes/ukri/assets/img/apple-icon-152x152.png" sizes="152x152">
       <link rel="apple-touch-icon" type="image/png" href="https://www.ukri.org/wp-content/themes/ukri/assets/img/apple-icon-180x180.png" sizes="180x180">
    </head>
-   <body class="error404 govuk-template__body ukri__body js-enabled">
+
+   <body class="error404 govuk-template__body ukri__body">
       <div class="ukri-main-content">
-      <a href="https://www.ukri.org/#skipnav-target" class="govuk-skip-link ukri-skip-link">Skip to main content</a>
+      <a href="#skipnav-target" class="govuk-skip-link ukri-skip-link">Skip to main content</a>
       <header class="govuk-header ukri-header" role="banner" data-module="govuk-header" style="background-color: transparent;">
          <div class="govuk-header__container ukri-header__container">
          <nav role="navigation" aria-label="Main">
@@ -90,42 +91,38 @@
           </div>
          </div>
       </header>
-      <div class="govuk-width-container beta-banner__container">
-        <div class="govuk-grid-row">
-          <div class="govuk-grid-column-two-thirds beta-banner">
-            <div class="beta-banner__inner">
-              <span class="beta-banner__tag govuk-body-s">NOTE</span>
-              <span class="beta-banner__content govuk-body-s">
-                <p>This is a new website – your <a href="https://www.ukri.org/feedback/">feedback</a> will help us to improve it.</p>
-              </span>
-            </div>
-          </div>
-        </div>
       </div>
-      </div>
-      <main class="govuk-main-wrapper ukri-main-content" id="main-content" role="main">
+      <main class="govuk-main-wrapper ukri-main-content" id="main-content" id="main-content">
          <div class="govuk-width-container">
-            <h1 class="govuk-heading-xl main-area__page-title" id="skipnav-target">404 Page not found</h1>
+            <h1 class="govuk-heading-xl main-area__page-title" id="skipnav-target">Page not found</h1>
             <div class="govuk-grid-row">
-               <div class="govuk-grid-column-two-thirds">
+               <div class="govuk-grid-column-two-thirds-from-desktop">
                   <article>
                      <div class="entry-content">
-                        <p><b>Sorry, we could not find the page.</b></p>
-                        <p><span style="font-weight: 400;">Please check you typed or copied the address correctly.</span></p>
-                        <p><span style="font-weight: 400;">You could also visit one of our popular pages:</span></p>
-                        <p><a href="https://www.ukri.org/opportunity/"><span style="font-weight: 400;">Find funding opportunities</span></a></p>
-                        <p><a href="https://www.ukri.org/who-we-fund/"><span style="font-weight: 400;">Who we fund</span></a></p>
-                        <p><a href="https://www.ukri.org/how-we-work/"><span style="font-weight: 400;">How we work</span></a></p>
-                        <p><a href="https://www.ukri.org/news-and-events/"><span style="font-weight: 400;">News</span></a></p>
-                        <p><a href="https://www.ukri.org/councils/"><span style="font-weight: 400;">Our councils</span></a></p>
-                        <p><span style="font-weight: 400;">Or for older content, try searching the National Archives.</span></p>
+                        <p><b>Sorry, we could not find the page you are looking for (this is known as a 404 error).</b></p>
+                        <p><span style="font-weight: 400;">Please try one of the following:</span></p>
+                        <ul>
+                           <li>Check you typed or copied the address correctly</li>
+                           <li>Use the links on this page to browse the site</li>
+                           <li><a href="https://www.ukri.org/about-us/contact-us/">Contact us</a> to let us know if you received this message due to a broken link</li>
+                           <li>For older content, try searching <a href="<%= site_archive_url %>">The National Archives.</a></li>
+                        </ul>
                      </div>
                   </article>
                </div>
             </div>
          </div>
       </main>
-      <footer class="govuk-footer ukri-footer" role="contentinfo">
+      <div class="govuk-width-container beta-banner__container govuk-!-margin-bottom-6">
+         <div class="beta-banner">
+            <div class="beta-banner__inner">
+               <div class="beta-banner__content govuk-body-s">
+                  <p><span class="beta-banner__tag govuk-body-s">NOTE</span>This is the first phase of our new website – let us know if you have <a href="https://www.surveymonkey.co.uk/r/ukri-website-feedback">feedback</a> or would like to <a href="https://www.surveymonkey.co.uk/r/recruitment-ur">help us test new developments</a>.</p>
+               </div>
+            </div>
+         </div>
+      </div>
+      <footer class="govuk-footer ukri-footer">
          <div class="govuk-width-container ">
             <div class="govuk-footer__navigation">
                <div class="govuk-footer__section">
@@ -149,8 +146,11 @@
                   <h2 class="govuk-footer__heading govuk-heading-m ukri-footer__heading">Useful links</h2>
                   <div class="menu-useful-links-container">
                      <ul id="menu-useful-links" class="govuk-footer__list ukri-footer__list">
-                        <li id="menu-item-1620" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1620 govuk-footer__list-item ukri-footer__list-item govuk-body-s"><a href="https://www.ukri.org/about-us/" class="govuk-footer__link">About us</a></li>
+                        <li id="menu-item-9312" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9312 govuk-footer__list-item ukri-footer__list-item govuk-body-s"><a href="https://www.ukri.org/about-us/accessibility-statement/" class="govuk-footer__link">Accessibility statement</a></li>
                         <li id="menu-item-1621" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1621 govuk-footer__list-item ukri-footer__list-item govuk-body-s"><a href="https://www.ukri.org/about-us/contact-us/" class="govuk-footer__link">Contact us</a></li>
+                        <li id="menu-item-9313" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9313 govuk-footer__list-item ukri-footer__list-item govuk-body-s"><a href="https://www.ukri.org/about-us/amdanom-ni/" class="govuk-footer__link">Cymraeg</a></li>
+                        <li id="menu-item-9314" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9314 govuk-footer__list-item ukri-footer__list-item govuk-body-s"><a href="https://www.ukri.org/about-us/contact-us/freedom-of-information-request/" class="govuk-footer__link">Freedom of information</a></li>
+                        <li id="menu-item-9315" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9315 govuk-footer__list-item ukri-footer__list-item govuk-body-s"><a href="https://www.ukri.org/about-us/policies-standards-and-data/modern-slavery-and-human-trafficking/" class="govuk-footer__link">Modern slavery and human trafficking</a></li>
                      </ul>
                   </div>
                </div>
@@ -170,13 +170,13 @@
                <div class="govuk-footer__meta-item govuk-footer__meta-item--grow ukri-footer__meta-item">
                   <h2 class="govuk-visually-hidden">Support links</h2>
                   <span class="govuk-footer__licence-description ukri-footer__licence-description test">
-                  © 2020 Copyright UKRI
+                  &copy; 2020 Copyright UKRI
                   </span>
                   <div class="ukri-footer__menu-container">
                      <ul id="menu-footer-menu-4" class="govuk-footer__inline-list ukri-footer__inline-list">
-                        <li id="menu-item-3997" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3997 govuk-footer__inline-list-item ukri-footer__inline-list-item govuk-body-s"><a href="https://www.ukri.org/about-us/amdanom-ni/" class="govuk-footer__link">Cymraeg</a></li>
-                        <li id="menu-item-3998" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3998 govuk-footer__inline-list-item ukri-footer__inline-list-item govuk-body-s"><a href="https://www.ukri.org/about-us/contact-us/freedom-of-information-request/" class="govuk-footer__link">Freedom of information</a></li>
-                        <li id="menu-item-3999" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3999 govuk-footer__inline-list-item ukri-footer__inline-list-item govuk-body-s"><a href="https://www.ukri.org/about-us/policies-and-standards/our-policies-and-standards__trashed/modern-slavery-and-human-trafficking/" class="govuk-footer__link">Modern slavery and human trafficking</a></li>
+                        <li id="menu-item-8621" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8621 govuk-footer__inline-list-item ukri-footer__inline-list-item govuk-body-s"><a href="https://www.ukri.org/about-us/cookie-policy/" class="govuk-footer__link">Cookie policy</a></li>
+                        <li id="menu-item-8632" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8632 govuk-footer__inline-list-item ukri-footer__inline-list-item govuk-body-s"><a href="https://www.ukri.org/about-us/privacy-notice/" class="govuk-footer__link">Privacy notice</a></li>
+                        <li id="menu-item-8625" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8625 govuk-footer__inline-list-item ukri-footer__inline-list-item govuk-body-s"><a href="https://www.ukri.org/about-us/terms-of-use/" class="govuk-footer__link">Terms of use</a></li>
                      </ul>
                   </div>
                </div>
