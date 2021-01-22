@@ -12,7 +12,7 @@ gem "foreman", "~>0.87.2"
 gem "puma", "~> 5.0.4"
 gem "rake", "13.0.1"
 gem "rollbar", "~> 3.0"
-gem "sidekiq", "~> 6.1.2"
+gem "sidekiq", "~> 6.1.3"
 
 group :development do
   gem "mr-sparkle", "0.3.0"
